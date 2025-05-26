@@ -1,0 +1,172 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-11">
+                <label for="parametro_bsq"> Busqueda</label>
+                <div class="form-group">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text my-button" id="addon-wrapping"><i
+                                class="fa-solid fa-magnifying-glass color"></i></span>
+                        <input type="text" class="form-control" id="parametro_bsq"
+                            placeholder="Consorcio, Registro, Certificado de Operacion, ...">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button id="btn_busq" class="btn btn-outline-info btn_n_op" onclick="busqueda(0)"><i
+                        class="fa-solid fa-magnifying-glass bt-bq"></i> Buscar</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow card_bsq">
+                    <div class="res_total">Resultado de Busqueda: <span id="total"></span></div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="centrar">N°</th>
+                                <th scope="col" class="centrar">Certificado Operacion</th>
+                                <th scope="col" class="centrar">Permiso Explotacion</th>
+                                <th scope="col" class="centrar">Registro</th>
+                                <th scope="col" class="centrar">Nombre Transportista</th>
+                                <th scope="col" class="centrar">Ruta</th>
+                                <th scope="col" class="centrar">Empresa</th>
+                                <th scope="col" class="centrar">Consorcio</th>
+                                <th scope="col" class="centrar">Observacion</th>
+                                <th scope="col" class="centrar">Estado</th>
+                                <th scope="col" class="centrar">Usuario</th>
+                                <th scope="col" class="centrar">Fecha</th>
+                                <th scope="col" class="centrar">Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody id="result">
+                            <tr>
+                                <td>1</td>
+                                <td>12345</td>
+                                <td>567899</td>
+                                <td>rm222</td>
+                                <td>pruebas nombre</td>
+                                <td>carrizal la sosa</td>
+                                <td>RRTT</td>
+                                <td>SITSAH</td>
+                                <td>obs de prueba</td>
+                                <td>Activo</td>
+                                <td>rmacias</td>
+                                <td>13/15/2025</td>
+                                <td><button class="btn btn-outline-info btn_n_op" data-bs-toggle="modal"
+                                        data-bs-target="#modalEdicion"><i class="fa-solid fa-gears"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>12345</td>
+                                <td>567899</td>
+                                <td>rm222</td>
+                                <td>pruebas nombre</td>
+                                <td>carrizal la sosa</td>
+                                <td>RRTT</td>
+                                <td>SITSAH</td>
+                                <td>obs de prueba</td>
+                                <td>Activo</td>
+                                <td>rmacias</td>
+                                <td>13/15/2025</td>
+                                <td><button class="btn btn-outline-info btn_n_op" data-bs-toggle="modal"
+                                        data-bs-target="#modalEdicion"><i class="fa-solid fa-gears"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="pagi">
+                    <ul class="pagination" id="paginacion">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------Modal Edicion------------- -->
+<div class="modal fade" id="modalEdicion" tabindex="-1" aria-labelledby="modalEdicionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="parametro_bsq"> Certificado de Operacion</label>
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text my-button" id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass color"></i></span>
+                                <input type="text" class="form-control" id="parametro_bsq" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="parametro_bsq"> Permiso de Explotacion</label>
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text my-button" id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass color"></i></span>
+                                <input type="text" class="form-control" id="parametro_bsq" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="parametro_bsq"> Registro</label>
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text my-button" id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass color"></i></span>
+                                <input type="text" class="form-control" id="parametro_bsq" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="parametro_bsq"> Nombre del Transportista</label>
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text my-button" id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass color"></i></span>
+                                <input type="text" class="form-control" id="parametro_bsq" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="parametro_bsq"> Ruta</label>
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text my-button" id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass color"></i></span>
+                                <input type="text" class="form-control" id="parametro_bsq" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="parametro_bsq"> Empresa</label>
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text my-button" id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass color"></i></span>
+                                <input type="text" class="form-control" id="parametro_bsq" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="parametro_bsq"> Consorcio</label>
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text my-button" id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass color"></i></span>
+                                <input type="text" class="form-control" id="parametro_bsq" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
