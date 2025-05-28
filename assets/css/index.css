@@ -1,0 +1,21 @@
+.titulo-mod {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    font-size: 19px;
+}
+
+strong {
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+#modal_dgt {
+    border: 1px solid #000000;
+}
+
+.info-veri {
+    color: #15bc1e;
+    font-weight: bold;
+    font-size: 14px;
+}
